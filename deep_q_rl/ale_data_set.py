@@ -100,9 +100,9 @@ batch_size randomly chosen state transitions.
                          self.height,
                          self.width),
                         dtype='uint8')
-        actions = np.zeros((batch_size, 1), dtype='int32')
-        rewards = np.zeros((batch_size, 1), dtype=floatX)
-        terminal = np.zeros((batch_size, 1), dtype='bool')
+        actions = np.zeros((batch_size, ), dtype='int32')
+        rewards = np.zeros((batch_size, ), dtype=floatX)
+        terminal = np.zeros((batch_size, ), dtype='bool')
 
         count = 0
         while count < batch_size:
