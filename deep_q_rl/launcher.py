@@ -14,7 +14,6 @@ except ImportError:
     import atari_py.ale_python_interface as ale_python_interface
 import cPickle
 import numpy as np
-import theano
 
 import ale_experiment
 import ale_agent
@@ -188,7 +187,8 @@ def launch(args, defaults, description):
         rng = np.random.RandomState()
 
     if parameters.cudnn_deterministic:
-        theano.config.dnn.conv.algo_bwd = 'deterministic'
+        # theano.config.dnn.conv.algo_bwd = 'deterministic'
+        pass
 
     ale = ale_python_interface.ALEInterface()
     ale.setInt('random_seed', rng.randint(1000))
