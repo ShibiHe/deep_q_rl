@@ -7,7 +7,11 @@ run_nips.py or run_nature.py.
 import os
 import argparse
 import logging
-import ale_python_interface
+
+try:
+    import ale_python_interface
+except ImportError:
+    import atari_py.ale_python_interface as ale_python_interface
 import cPickle
 import numpy as np
 import theano

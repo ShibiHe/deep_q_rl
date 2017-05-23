@@ -4,9 +4,8 @@ construct randomly selected batches of phi's from the stored history.
 
 import numpy as np
 import time
-import theano
 
-floatX = theano.config.floatX
+floatX = np.float32
 
 class DataSet(object):
     """A replay memory consisting of circular buffers for observed images,
